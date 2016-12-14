@@ -14,7 +14,7 @@ def main():
     cookie = {
         "PHPSESSID": os.getenv("PHPSESSID"),
     }
-    response = requests.get(BASE_URL, cookies=cookie)   
+    response = requests.get(BASE_URL, cookies=cookie)
     tree = html.fromstring(response.content)
     message = tree.xpath("/html/body/div[2]/div/div[2]/div/text()[2]")[0]
     message = message.strip()
