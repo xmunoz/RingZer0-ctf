@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -rin /etc architect
+grep -rin architect /etc/fstab
